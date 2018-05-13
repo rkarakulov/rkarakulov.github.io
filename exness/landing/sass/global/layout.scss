@@ -1,0 +1,23 @@
+*, :after, :before, input[type=search] {
+  box-sizing : border-box;
+}
+
+body {
+  background-color  : $bg-color;
+  font-family       : $font-regular;
+  line-height       : $font-line-height;
+}
+
+.container {
+  @include container;
+}
+
+ul {
+  margin: 0;
+}
+
+img {
+  display     : block;
+  max-width   : 100%;
+  height      : auto;
+}

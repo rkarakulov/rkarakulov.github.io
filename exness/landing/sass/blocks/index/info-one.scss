@@ -1,0 +1,107 @@
+.info-one {
+  overflow : hidden;
+}
+
+.info-one__items {
+  background-color  : $bg-color-btn;
+  display           : flex;
+  flex-direction    : column;
+  padding           : 20px;
+  height            : 400px;
+  text-align        : center;
+  align-items       : center;
+
+  @media #{$media-tablet} {
+  }
+
+  @media #{$media-desktop} {
+    flex-direction  : row;
+    text-align      : left;
+    justify-content : space-around; 
+    position        : relative;
+    padding         : 50px;
+  }
+}
+
+.info-one__account-text {
+  display     : none;
+
+  @media #{$media-tablet} {
+  }
+
+  @media #{$media-desktop} {
+    font-family     : $font-bold; 
+    display         : block;
+    transform       : rotate(90deg);
+    font-size       : 20px;
+    line-height     : 160%;
+    font-weight     : bold;
+    white-space     : nowrap;
+    overflow        : hidden;
+    height          : 60px;
+    position        : absolute;
+    left            : -70px;
+    top             : 0;
+    bottom          : 0;
+    margin          : auto;
+    text-align      : center;
+  }
+}
+
+.info-one__percent {
+  background        : url(../img/zero.svg) no-repeat center center;
+  height            : 201px;
+  width             : 100%;
+  background-size   : contain;
+  margin            : 40px 0;
+  
+  @media #{$media-tablet} {
+  }
+
+  @media #{$media-desktop} {
+    margin          : 0px 140px 0 90px;
+    display         : flex;
+    justify-content : center;
+    align-items     : flex-end;
+    position        : relative; 
+  }
+}
+
+.info-one__comission-text {
+  @include visible-desktop-only(block);
+
+  @media #{$media-tablet} {
+  }
+
+  @media #{$media-desktop} {
+    white-space     : nowrap;
+    font-size       : 20px;
+    line-height     : 160%;
+    font-family     : $font-bold;
+    display         : block;
+    position        : absolute;
+    bottom          : -60px;
+    margin          : 0 auto;
+    left            : 0;
+    right           : 0;
+    text-align      : center;
+  }
+}
+
+.info-one__text {
+  font-size     : 22px;
+  line-height   : 146%;
+  color         : #000000;
+  width         : 100%;
+
+  @media #{$media-tablet} {
+  }
+
+  @media #{$media-desktop} {
+    font-size   : 40px;
+    line-height : 120%;
+    width       : 1350px;
+    display     : flex;
+    align-items : center;
+  }
+}

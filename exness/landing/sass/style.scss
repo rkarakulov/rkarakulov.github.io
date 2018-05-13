@@ -1,0 +1,16 @@
+@import "variables";
+@import "mixins";
+
+@import "global/reset";
+@import "global/normalize";
+@import "global/fonts";
+@import "global/layout";
+
+@import "blocks/btns";
+@import "blocks/inputs";
+
+@import "blocks/index/welcome";
+@import "blocks/index/info-one";
+@import "blocks/index/info-two";
+
+@import "blocks/page-footer";
