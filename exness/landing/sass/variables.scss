@@ -1,41 +1,25 @@
-/* Общие */
-
 $color-danger           : #FF0000;
 $color-error            : #ff5c5c;
-
-$color-controls         : #5c6870;
-$color-controls-hvr     : #333333;
-$color-controls-down    : #c1c1c1;
 
 $bg-color               : #DEDEDE;
 $bg-color-btn           : #FFCF00;
 
-$border-color           : #dbdbdb;
-
 $width-mobile           : 480px;
 $width-tablet           : 768px;
 $width-desktop          : 1200px;
-$width-right-bar        : 17px;
 
 $media-mobile           : (min-width: $width-mobile);
 $media-tablet           : (min-width: $width-tablet);
 $media-desktop          : (min-width: $width-desktop);
-
-$media-only-mobile      : (max-width: $width-tablet - 1);
-
-/* Шрифты */
 
 $font-bold              : 'CirceWebBold', sans-serif;
 $font-regular           : 'CirceWebRegular', sans-serif;
 $font-light             : 'CirceWebLight', sans-serif; 
 $font-extra-light       : 'CirceWebExtraLight', sans-serif; 
 
-$font-color-bold        : #000;
-$font-color-regular     : #333;
-$font-color-down        : #88b6d1;
+$font-color-primary     : #000000;
+$font-color-secondary   : #ffffff;
 
-$font-size-bold         : 18px;
-$font-size-bold-tablet  : 21px;
-$font-size-regular      : 14px;
-$font-size-interest     : 21px;
-$font-line-height       : 1.444;
+$font-size-small        : 11px;
+$font-size-regular      : 20px;
+$font-size-big          : 40px;

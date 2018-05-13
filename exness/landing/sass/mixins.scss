@@ -21,7 +21,6 @@
 }
 
 @mixin container {
-  //background-color : #fff;
   margin           : 0 auto;
   width            : $width-mobile;
 
@@ -31,45 +30,5 @@
 
   @media #{$media-desktop} {
     width : $width-desktop;
-  }
-}
-
-@mixin reason-txt-regular {
-  color       : $font-color-regular;
-  font        : $font-size-regular $font-regular;
-  line-height : $font-line-height;
-}
-
-@mixin placeholder {
-  &::placeholder {
-    @content
-  }
-}
-
-@mixin form-placeholder-content {
-  color       : $font-color-bold;
-  font-family : $font-bold;
-  font-size   : $font-size-bold;
-}
-
-@mixin form-input-text {
-  @include transition;
-  @include placeholder {
-    @include form-placeholder-content;
-  }
-
-  background-color : $input-bg;
-  border           : 2px solid $input-bg;
-  padding          : 16px 22px;
-
-  &:hover {
-    background-color : $input-bg-hvr;
-    border           : 2px solid $input-bg-hvr;
-  }
-
-  &:focus {
-    outline          : none;
-    border           : 2px solid $input-color-active-border;
-    background-color : $input-bg-active;
   }
 }

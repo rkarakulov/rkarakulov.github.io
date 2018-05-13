@@ -33,7 +33,7 @@
     font-family     : $font-bold; 
     display         : block;
     transform       : rotate(90deg);
-    font-size       : 20px;
+    font-size       : $font-size-regular;
     line-height     : 160%;
     font-weight     : bold;
     white-space     : nowrap;
@@ -75,7 +75,7 @@
 
   @media #{$media-desktop} {
     white-space     : nowrap;
-    font-size       : 20px;
+    font-size       : $font-size-regular;
     line-height     : 160%;
     font-family     : $font-bold;
     display         : block;
@@ -91,14 +91,14 @@
 .info-one__text {
   font-size     : 22px;
   line-height   : 146%;
-  color         : #000000;
+  color         : $font-color-primary;
   width         : 100%;
 
   @media #{$media-tablet} {
   }
 
   @media #{$media-desktop} {
-    font-size   : 40px;
+    font-size   : $font-size-big;
     line-height : 120%;
     width       : 1350px;
     display     : flex;

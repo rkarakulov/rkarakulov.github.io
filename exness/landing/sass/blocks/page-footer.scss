@@ -78,7 +78,7 @@
 } 
 
 .page-footer-menu__link_primary {
-  color : #ffffff;
+  color : $font-color-secondary;
 
   @media #{$media-tablet} {
   }
@@ -105,7 +105,7 @@
 .page-footer-info__text {
   text-align      : center;
   color           : #616161;
-  font-size       : 11px;
+  font-size       : $font-size-small;
   line-height     : 146%;
   font-family     : 'ArialMT'; 
 

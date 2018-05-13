@@ -1,12 +1,12 @@
 .btn {
   background-color      : $bg-color-btn;
   border                : none;
-  color                 : #000000;
+  color                 : $font-color-primary;
   cursor                : pointer;
   text-decoration       : none;
   line-height           : 146%;
   display               : block;
-  font-size             : 11px;
+  font-size             : $font-size-small;
   margin                : 0 auto;
   height                : 72px;
   text-transform        : uppercase;

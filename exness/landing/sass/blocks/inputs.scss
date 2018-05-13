@@ -2,9 +2,13 @@
     display             : block;
     width               : 328px;
     height              : 72px;
-    padding             : 20px;
-    color               : #495057;
+    padding             : 20px;    
     background-color    : #EFEFEF;
     background-clip     : padding-box;
     border              : 0;
+
+    &:focus {
+        outline         : 0;
+    }
 }
+
