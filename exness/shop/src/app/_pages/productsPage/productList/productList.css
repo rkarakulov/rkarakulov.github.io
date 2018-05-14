@@ -1,0 +1,71 @@
+.main {
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid #e6e6e6;
+}
+
+.main .header {
+    background-color: #e6e6e6;
+    font-size: 16px;
+    font-weight: bold; 
+    display: flex;
+    padding: 0px 60px 0px 15px;
+    border-bottom: 1px solid black;
+}
+
+.main .header .name {
+    width: 210px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    border-right: 1px solid black;
+}
+
+.main .header .price,
+.main .header .count {
+    width: 70px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    border-right: 1px solid black;
+}
+
+.normal {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.normal li {
+    position: relative;
+    font-size: 24px;
+    border-bottom: 1px solid black;
+}
+
+.normal li:last-child {
+    border-bottom: none;
+}
+
+.normal li.editing {
+    border-bottom: none;
+    padding: 0;
+}
+
+.normal li.editing .edit {
+    display: block;
+    width: 506px;
+    padding: 13px 17px 12px 17px;
+    margin: 0 0 0 43px;
+}
+
+.normal li.editing .view {
+    display: none;
+}
+
+.normal li .edit {
+    display: none;
+}
+
+.normal li.editing:last-child {
+    margin-bottom: -1px;
+}

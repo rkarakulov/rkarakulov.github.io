@@ -1,0 +1,46 @@
+{
+    "collectCoverageFrom": [
+        "src/**/*.(ts)",
+        "!**/*.d.ts"
+    ],
+    "coverageThreshold": {
+        "global": {
+            "statements": 90,
+            "branches": 90,
+            "functions": 90,
+            "lines": 90
+        }
+    },
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+        "html"
+    ],
+    "globals": {
+        "FORCE_DEBUG_MODE": true,
+        "APP_NAME": "ExnessShop",
+        "ts-jest": {
+            "tsConfigFile": "tsconfig.json"
+        }
+    },
+    "rootDir": "./",
+    "testRegex": "\\.test\\.(ts)$",
+    "moduleFileExtensions": [
+        "ts",
+        "tsx",
+        "js",
+        "json"
+    ],
+    "transform": {
+        ".(ts)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "moduleNameMapper": {
+        "\\.(scss|css|mp3|ogg|svg|png|gif|cur)$": "<rootDir>/tasks/test/jest/loadMock.js"
+    },
+    "moduleDirectories": [
+        "node_modules",
+        "src"
+    ],
+    "snapshotSerializers": [
+        "enzyme-to-json/serializer"
+    ]
+}

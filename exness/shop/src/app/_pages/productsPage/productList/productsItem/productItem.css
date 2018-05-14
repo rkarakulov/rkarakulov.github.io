@@ -1,0 +1,100 @@
+.normal label {
+    white-space: pre-line;
+    word-break: break-all;
+    padding: 0px 15px;
+    display: flex;
+    margin-left: 0px;
+    line-height: 1.2;
+    transition: color 0.4s;
+}
+
+.normal label span {
+    margin-right: 60px;
+}
+
+.normal label .name {
+    width: 210px;
+    text-align: left;
+    padding: 10px;
+    border-right: 1px solid black;
+}
+
+.normal label .price {
+    width: 70px;
+    text-align: right;
+    padding: 10px;
+    border-right: 1px solid black;
+}
+
+.normal label .count {
+    width: 70px;
+    text-align: right;
+    padding: 10px;
+    border-right: 1px solid black;
+}
+
+.normal .destroy,
+.normal .edit,
+.normal .dec,
+.normal .inc {
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    margin-right: 10px;
+    float: left;
+}
+
+.normal:hover .destroy,
+.normal:hover .edit,
+.normal:hover .dec,
+.normal:hover .inc {
+    display: block;
+}
+
+.normal .destroy:after {
+    content: 'x';
+}
+
+.normal .edit:after {
+    content: 'edit';
+}
+
+.normal .inc:after {
+    content: '+';
+}
+
+.normal .dec:after {
+    content: '-';
+}
+
+.editing {
+    border-bottom: none;
+    padding: 0 0 0 10px;    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.editing button {
+    margin-right: 10px;
+}
+
+.editing:last-child {
+    margin-bottom: -1px;
+}
+
+.editing .edit {
+    display: block;
+    width: 506px;
+    padding: 13px 17px 12px 17px;
+    margin: 0 0 0 43px;
+}
+
+.view  {
+    display: flex;
+    align-items: center;
+}
+
+.editing .view {
+    display: none;
+}

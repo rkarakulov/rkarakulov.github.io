@@ -1,0 +1,26 @@
+.asc,
+.none,
+.desc {
+    display: inline-block;
+}
+
+.none::before,
+.asc::before,
+.desc::before {    
+    font-size: 22px;
+    color: black;
+    padding-left: 5px;
+}
+
+.none::before {
+    content: '↑';
+    opacity: 0;
+}
+
+.asc::before {
+    content: '↓';
+}
+
+.desc::before {    
+    content: '↑';
+}
