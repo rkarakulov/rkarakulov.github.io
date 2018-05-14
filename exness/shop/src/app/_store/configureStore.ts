@@ -7,23 +7,19 @@ import {IStore} from 'app/_store/store.interface';
 import {loggerMiddleware} from 'app/_store/middleware/logger/logger.middleware';
 import {loadStore, saveStore} from 'app/_features/localStorage/localStorage';
 import {epicMiddleware} from 'app/_store/middleware/epic/epic.middleware';
+import {throttle} from 'lodash';
 
 export function configureStore(history: History): Store<IStore> {
     const initialState = loadStore();
 
-    let middleware = applyMiddleware(
-        epicMiddleware,
-        loggerMiddleware,
-        routerMiddleware(history)
-    );
+    let middleware = applyMiddleware(epicMiddleware, loggerMiddleware, routerMiddleware(history));
 
     if (process.env.NODE_ENV !== 'production') {
         middleware = composeWithDevTools(middleware);
     }
 
     const store = createStore(rootReducer as any, initialState as any, middleware) as Store<IStore>;
-
-    store.subscribe(() => saveStore(store.getState()));
+    store.subscribe(throttle(() => saveStore(store.getState()), 1000));
 
     if (module.hot) {
         const path = './root.reducer.ts';

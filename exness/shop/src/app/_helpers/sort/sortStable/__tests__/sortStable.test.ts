@@ -1,5 +1,5 @@
-import { sortStable } from "app/_helpers/sort/sortStable/sortStable";
-import { SortDirection } from "app/_helpers/sort/sortDirection";
+import {sortStable} from 'app/_helpers/sort/sortStable/sortStable';
+import {SortDirection} from 'app/_helpers/sort/sortDirection';
 
 interface ITestObject {
     id: number;
@@ -61,7 +61,7 @@ describe('sortStable', () => {
             {
                 id: 5,
                 text: 'c'
-            }            
+            }
         ];
 
         expect(actual).toEqual(expected);
@@ -93,9 +93,9 @@ describe('sortStable', () => {
             {
                 id: 6,
                 text: 'a'
-            }                        
+            }
         ];
 
         expect(actual).toEqual(expected);
     });
-});    
+});

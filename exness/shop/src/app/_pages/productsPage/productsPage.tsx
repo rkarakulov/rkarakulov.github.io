@@ -7,16 +7,13 @@ import {Header} from 'app/_pages/productsPage/header/header';
 import {ProductList} from 'app/_pages/productsPage/productList/productList';
 import {ProductsActions} from 'app/_features/products/products.action';
 
-@connect(
-    productsPageSelector,
-    {
-        addProduct: ProductsActions.add,
-        editProduct: ProductsActions.edit,
-        removeProduct: ProductsActions.remove,
-        sortProduct: ProductsActions.sort,
-        saveProducts: ProductsActions.save
-    }
-)
+@connect(productsPageSelector, {
+    addProduct: ProductsActions.add,
+    editProduct: ProductsActions.edit,
+    removeProduct: ProductsActions.remove,
+    sortProduct: ProductsActions.sort,
+    saveProducts: ProductsActions.save
+})
 export class ProductsPage extends React.Component<IProductsPageProps> {
     public static defaultProps: Partial<IProductsPageProps> = {};
 

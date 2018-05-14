@@ -5,17 +5,19 @@
     "scripts": {
         "test": "jest",
         "compile": "tsc --noEmit",
-        "precommit": "npm run compile",
+        "precommit": "npm run compile & npm run lint",
         "prepush": "npm run test",
         "prestart": "npm install",
         "start": "webpack-dev-server --mode development --hot --progress --color --port 3000 --open",
         "build": "webpack -p --progress --colors",
         "prettier": "prettier --write \"src/**/*.{ts,tsx,css}\"",
-        "coverage": "jest --coverage"
+        "coverage": "jest --coverage",
+        "lint": "tslint -p tsconfig.json -c .tslintrc.js"
     },
     "license": "MIT",
     "dependencies": {
         "classnames": "2.2.5",
+        "lodash": "4.17.10",
         "react": "16.3.2",
         "react-dom": "16.3.2",
         "react-redux": "5.0.7",
@@ -23,11 +25,11 @@
         "react-router-redux": "5.0.0-alpha.9",
         "redux": "4.0.0",
         "redux-actions": "2.3.0",
-        "reselect": "3.0.1",
-        "typescript-fsa": "2.5.0",
-        "typescript-fsa-reducers": "0.4.5",
         "redux-observable": "0.17.0",
-        "rxjs": "5.5.2"
+        "reselect": "3.0.1",
+        "rxjs": "5.5.2",
+        "typescript-fsa": "2.5.0",
+        "typescript-fsa-reducers": "0.4.5"
     },
     "devDependencies": {
         "@types/classnames": "2.2.3",
@@ -35,12 +37,14 @@
         "@types/enzyme-adapter-react-16": "1.0.2",
         "@types/history": "4.6.2",
         "@types/jest": "22.1.0",
+        "@types/lodash": "4.14.108",
         "@types/node": "10.0.0",
         "@types/react": "16.3.13",
         "@types/react-dom": "16.0.5",
         "@types/react-redux": "5.0.18",
         "@types/react-router": "4.0.24",
         "@types/react-router-redux": "5.0.13",
+        "@types/react-test-renderer": "16.0.1",
         "@types/redux-actions": "2.2.4",
         "@types/webpack": "4.1.4",
         "@types/webpack-env": "1.13.6",

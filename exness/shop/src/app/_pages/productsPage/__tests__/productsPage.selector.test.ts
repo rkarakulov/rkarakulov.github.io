@@ -2,11 +2,9 @@ import {SortDirection} from 'app/_helpers/sort/sortDirection';
 import {IProductsSort} from 'app/_features/products/products.interface';
 
 const sortProductsMock = jest.fn();
-jest
-    .resetModules()
-    .doMock('app/_pages/productsPage/productsPage.helper', () => ({
-        sortProducts: sortProductsMock
-    }));
+jest.resetModules().doMock('app/_pages/productsPage/productsPage.helper', () => ({
+    sortProducts: sortProductsMock
+}));
 
 import {productsPageSelector} from 'app/_pages/productsPage/productsPage.selector';
 
@@ -21,8 +19,7 @@ describe('productsPage.selector', () => {
             } as IProductsSort,
             data: []
         };
-        sortProductsMock
-            .mockImplementation(() => sortedProducts);
+        sortProductsMock.mockImplementation(() => sortedProducts);
 
         afterEach(() => {
             sortProductsMock.mockReset();

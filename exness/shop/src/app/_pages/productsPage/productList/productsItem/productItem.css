@@ -69,7 +69,7 @@
 
 .editing {
     border-bottom: none;
-    padding: 0 0 0 10px;    
+    padding: 0 0 0 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -90,7 +90,7 @@
     margin: 0 0 0 43px;
 }
 
-.view  {
+.view {
     display: flex;
     align-items: center;
 }

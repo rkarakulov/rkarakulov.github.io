@@ -25,69 +25,60 @@ export const initialProductsStore: IProductsStore = {
 
 export const productsReducer = reducerWithInitialState(initialProductsStore)
     .case(ProductsActions.add, (productsStore: IProductsStore, productData: IProductPartial) => {
-            return productData.name && productData.name.length > 0
-                ? {
-                    sort: productsStore.sort,
-                    data: [
-                        {
-                            id: productsStore.data
-                                .reduce((max: number, product: IProduct) =>
-                                    Math.max(product.id || 1, max), 0) + 1,
-                            ...productData
-                        },
-                        ...productsStore.data
-                    ]
-                }
-                : {
-                    sort: {
-                        ...productsStore.sort
+        return productData.name && productData.name.length > 0
+            ? {
+                sort: productsStore.sort,
+                data: [
+                    {
+                        id:
+                        productsStore.data.reduce(
+                            (max: number, product: IProduct) => Math.max(product.id || 1, max),
+                            0
+                        ) + 1,
+                        ...productData
                     },
-                    data: [
-                        ...productsStore.data
-                    ]
-                };
-        }
-    )
+                    ...productsStore.data
+                ]
+            }
+            : {
+                sort: {
+                    ...productsStore.sort
+                },
+                data: [...productsStore.data]
+            };
+    })
     .case(ProductsActions.remove, (productsStore: IProductsStore, productId: number) => {
         const productsData = productsStore.data.filter(product => product.id !== productId);
         return {
             sort: {
                 ...productsStore.sort
             },
-            data: [
-                ...productsData
-            ]
+            data: [...productsData]
         };
     })
     .case(ProductsActions.edit, (productsStore: IProductsStore, editedProduct: IProduct) => {
-        const productsData = productsStore.data
-            .map((product: IProduct) => {
-                return product.id === editedProduct.id
-                    ? {...editedProduct}
-                    : {...product};
-            });
+        const productsData = productsStore.data.map((product: IProduct) => {
+            return product.id === editedProduct.id ? {...editedProduct} : {...product};
+        });
 
         return {
             sort: {
                 ...productsStore.sort
             },
-            data: [
-                ...productsData
-            ]
+            data: [...productsData]
         };
     })
     .case(ProductsActions.sort, (productsStore: IProductsStore, field: keyof IProduct) => {
         return {
             sort: {
-                direction: productsStore.sort.field === field
-                    ? productsStore.sort.direction === SortDirection.asc
+                direction:
+                    productsStore.sort.field === field
+                        ? productsStore.sort.direction === SortDirection.asc
                         ? SortDirection.desc
                         : SortDirection.asc
-                    : SortDirection.asc,
+                        : SortDirection.asc,
                 field
             },
-            data: [
-                ...productsStore.data
-            ]
+            data: [...productsStore.data]
         };
     });

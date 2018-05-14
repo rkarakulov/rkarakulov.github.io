@@ -6,7 +6,4 @@ const epicOptions = {
     dependencies: {}
 };
 
-export const epicMiddleware = createEpicMiddleware(
-    rootEpic,
-    epicOptions,
-);
+export const epicMiddleware = createEpicMiddleware(rootEpic, epicOptions);

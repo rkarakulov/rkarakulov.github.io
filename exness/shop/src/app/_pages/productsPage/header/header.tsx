@@ -7,13 +7,8 @@ export class Header extends React.Component<IHeaderProps> {
     public render() {
         return (
             <header>
-                <h3>
-                    Products
-                </h3>
-                <ProductItemTextInput
-                    editing={false}
-                    onSave={this.onSave}
-                />
+                <h3>Products</h3>
+                <ProductItemTextInput editing={false} onSave={this.onSave}/>
             </header>
         );
     }

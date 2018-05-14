@@ -13,5 +13,4 @@ export const productsPageSelector = createSelector<IProductsStoreSegment,
             sort: productsStore.sort,
             products: sortProducts(productsStore)
         };
-    }
-);
+    });

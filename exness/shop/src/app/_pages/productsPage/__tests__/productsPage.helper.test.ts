@@ -3,11 +3,9 @@ import {IProduct} from 'app/_features/products/product/product.interface';
 import {SortDirection} from 'app/_helpers/sort/sortDirection';
 
 const sortStableMock = jest.fn();
-jest
-    .resetModules()
-    .doMock('app/_helpers/sort/sortStable/sortStable', () => ({
-        sortStable: sortStableMock            
-    }));
+jest.resetModules().doMock('app/_helpers/sort/sortStable/sortStable', () => ({
+    sortStable: sortStableMock
+}));
 
 import {sortProducts} from 'app/_pages/productsPage/productsPage.helper';
 
@@ -21,12 +19,11 @@ describe('productsPage.helper', () => {
             data: [expect.anything()]
         } as IProductsStore;
         const dest: IProduct[] = [expect.anything()];
-        sortStableMock
-            .mockImplementation(() => dest);    
+        sortStableMock.mockImplementation(() => dest);
 
         afterEach(() => {
-            sortStableMock.mockReset();        
-        });    
+            sortStableMock.mockReset();
+        });
 
         test('should return result of "sortStable" function', () => {
             const actual = sortProducts(productsStore);
@@ -39,9 +36,11 @@ describe('productsPage.helper', () => {
             sortProducts(productsStore);
 
             expect(sortStableMock).toHaveBeenCalledTimes(1);
-            expect(sortStableMock).toHaveBeenCalledWith(productsStore.data,
+            expect(sortStableMock).toHaveBeenCalledWith(
+                productsStore.data,
                 productsStore.sort.field,
-                productsStore.sort.direction);
+                productsStore.sort.direction
+            );
         });
     });
 });
