@@ -34,23 +34,11 @@ export class ProductItem extends React.Component<IProductItemProps, IProductItem
                         <div className={style.name}>{product.name}</div>
                         <div className={style.price}>{product.price}</div>
                         <div className={style.count}>{product.count}</div>
-                    </label>                   
-                    <button
-                        className={style.inc}
-                        onClick={() => this.onIncrement(product)}
-                    />
-                    <button
-                        className={style.dec}
-                        onClick={() => this.onDecrement(product)}
-                    />                    
-                    <button
-                        className={style.edit}
-                        onClick={() => this.onEdit()}
-                    />
-                    <button
-                        className={style.destroy}
-                        onClick={() => this.onRemove(product)}
-                    />
+                    </label>
+                    <button className={style.inc} onClick={() => this.onIncrement(product)}/>
+                    <button className={style.dec} onClick={() => this.onDecrement(product)}/>
+                    <button className={style.edit} onClick={() => this.onEdit()}/>
+                    <button className={style.destroy} onClick={() => this.onRemove(product)}/>
                 </div>
             );
         }
@@ -90,9 +78,7 @@ export class ProductItem extends React.Component<IProductItemProps, IProductItem
 
         actions.editProduct({
             ...product,
-            count: product.count > 0
-                ? product.count - 1
-                : 0
+            count: product.count > 0 ? product.count - 1 : 0
         });
     };
 

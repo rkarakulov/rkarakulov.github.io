@@ -6,5 +6,6 @@ import {Observable} from 'rxjs';
 export interface IEpicDependencies {
 }
 
-export type IEpic<T extends AnyAction, S, D = {}> =
-    (action$: ActionsObservable<T>, store: MiddlewareAPI<Dispatch, S>, dependencies: D) => Observable<T>;
+export type IEpic<T extends AnyAction, S, D = {}> = (action$: ActionsObservable<T>,
+                                                     store: MiddlewareAPI<Dispatch, S>,
+                                                     dependencies: D) => Observable<T>;

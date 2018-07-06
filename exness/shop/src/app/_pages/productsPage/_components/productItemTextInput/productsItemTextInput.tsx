@@ -1,15 +1,11 @@
 import * as React from 'react';
 import * as classNames from 'classnames';
 import * as style from './productItemTextInput.css';
-import {
-    IProductItemTextInputProps,
-    IProductItemTextInputState
-} from './productsItemTextInput.interface';
-import { IProductPartial } from 'app/_features/products/product/product.interface';
+import {IProductItemTextInputProps, IProductItemTextInputState} from './productsItemTextInput.interface';
+import {IProductPartial} from 'app/_features/products/product/product.interface';
 
 export class ProductItemTextInput extends React.Component<IProductItemTextInputProps,
     IProductItemTextInputState> {
-
     private initState: IProductPartial = {
         name: '',
         price: 0,
@@ -53,19 +49,8 @@ export class ProductItemTextInput extends React.Component<IProductItemTextInputP
                     value={this.state.count}
                     onChange={event => this.onChange(event, 'count')}
                 />
-                <button onClick={this.onSave}>
-                    {
-                        this.props.editing
-                            ? 'Save'
-                            : 'Add'
-                    }
-                </button>
-                {
-                    this.props.editing &&
-                    <button onClick={this.onCancel}>
-                        Cancel
-                    </button>
-                }
+                <button onClick={this.onSave}>{this.props.editing ? 'Save' : 'Add'}</button>
+                {this.props.editing && <button onClick={this.onCancel}>Cancel</button>}
             </React.Fragment>
         );
     }

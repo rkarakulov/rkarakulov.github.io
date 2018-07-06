@@ -1,5 +1,5 @@
-import { IProduct } from "app/_features/products/product/product.interface";
-import { IProductsSort } from "app/_features/products/products.interface";
+import {IProduct} from 'app/_features/products/product/product.interface';
+import {IProductsSort} from 'app/_features/products/products.interface';
 
 export type IDirectionIconProps = IDirectionIconOwnProps;
 

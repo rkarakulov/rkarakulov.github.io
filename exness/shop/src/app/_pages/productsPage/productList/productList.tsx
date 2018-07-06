@@ -19,7 +19,7 @@ export class ProductList extends React.Component<IProductListProps> {
                             product={product}
                             actions={{
                                 editProduct: actions.editProduct,
-                                removeProduct: actions.removeProduct,
+                                removeProduct: actions.removeProduct
                             }}
                         />
                     ))}
@@ -33,26 +33,17 @@ export class ProductList extends React.Component<IProductListProps> {
         if (products.length > 0) {
             return (
                 <div className={style.header}>
-                    <div
-                        className={style.name} 
-                        onClick={() => this.onSort('name')}
-                    >
+                    <div className={style.name} onClick={() => this.onSort('name')}>
                         Name
-                        <DirectionIcon sort={sort} field="name" />
+                        <DirectionIcon sort={sort} field="name"/>
                     </div>
-                    <div 
-                        className={style.price} 
-                        onClick={() => this.onSort('price')}
-                    >
-                         Price
-                        <DirectionIcon sort={sort} field="price" />
+                    <div className={style.price} onClick={() => this.onSort('price')}>
+                        Price
+                        <DirectionIcon sort={sort} field="price"/>
                     </div>
-                    <div
-                        className={style.count} 
-                        onClick={() => this.onSort('count')}
-                    >
-                         Count
-                         <DirectionIcon sort={sort} field="count" />
+                    <div className={style.count} onClick={() => this.onSort('count')}>
+                        Count
+                        <DirectionIcon sort={sort} field="count"/>
                     </div>
                 </div>
             );
